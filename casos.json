@@ -1,0 +1,30 @@
+{
+  "CASE-1001": {
+    "cliente": "laura.gomez",
+    "asunto": "Doble cobro mensualidad plan Pro",
+    "estado": "abierto",
+    "prioridad": "alta",
+    "notas": ["Cliente reporta dos cargos de 19900 COP el 2026-06-03"]
+  },
+  "CASE-1002": {
+    "cliente": "carlos.ruiz",
+    "asunto": "No llega transferencia 84512",
+    "estado": "en_proceso",
+    "prioridad": "media",
+    "notas": ["Transferencia retenida por verificación antifraude"]
+  },
+  "CASE-1003": {
+    "cliente": "laura.gomez",
+    "asunto": "Cambio de correo de notificaciones",
+    "estado": "cerrado",
+    "prioridad": "baja",
+    "notas": ["Correo actualizado y confirmado por la cliente"]
+  },
+  "CASE-1004": {
+    "cliente": "andrea.mejia",
+    "asunto": "Bloqueo de cuenta tras 3 intentos fallidos",
+    "estado": "abierto",
+    "prioridad": "media",
+    "notas": []
+  }
+}

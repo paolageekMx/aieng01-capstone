@@ -1,0 +1,5 @@
+[
+  {"id": "SAL-101", "nombre": "Sala Faro", "piso": 1, "capacidad": 4, "equipo": ["videollamada"]},
+  {"id": "SAL-201", "nombre": "Sala Puerto", "piso": 2, "capacidad": 8, "equipo": ["proyector", "videollamada"]},
+  {"id": "SAL-301", "nombre": "Auditorio", "piso": 3, "capacidad": 20, "equipo": ["proyector"]}
+]

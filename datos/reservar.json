@@ -1,0 +1,8 @@
+[
+  {"id": "RES-5001", "sala_id": "SAL-201", "fecha": "2026-11-10", "inicio": "10:00", "fin": "11:00",
+   "responsable": "pedro.lara", "motivo": "Revisión semanal de ventas"},
+  {"id": "RES-5002", "sala_id": "SAL-201", "fecha": "2026-11-10", "inicio": "15:00", "fin": "16:30",
+   "responsable": "laura.vega", "motivo": "Planeación del trimestre"},
+  {"id": "RES-5003", "sala_id": "SAL-301", "fecha": "2026-11-10", "inicio": "09:00", "fin": "12:00",
+   "responsable": "rh.eventos", "motivo": "Inducción de nuevos ingresos"}
+]

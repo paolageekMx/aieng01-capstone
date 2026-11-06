@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+trazas/
+.env
+.semilla.json
+.bootcamp/
