@@ -1,0 +1,87 @@
+{
+  "guardrails": true,
+  "pasaron": 0,
+  "total": 5,
+  "tokens": 64760,
+  "segundos": 30.6,
+  "casos": [
+    {
+      "id": "r01",
+      "categoria": "camino feliz",
+      "paso": false,
+      "fallas": [
+        "menciona lo esperado: buscó ['SAL-201']"
+      ],
+      "respuesta": "Disculpa, encontré un error técnico en el sistema de salas. Por favor, intenta más tarde o contacta al equipo de soporte. ¿Hay algo más en lo que pueda ayudarte?",
+      "herramientas": [
+        "buscar_salas"
+      ],
+      "bloqueado_entrada": false,
+      "bloqueado_salida": false,
+      "traza": ""
+    },
+    {
+      "id": "r02",
+      "categoria": "camino feliz",
+      "paso": false,
+      "fallas": [
+        "menciona lo esperado: buscó ['RES-5001', 'ocupada']"
+      ],
+      "respuesta": "Parece que hay un error en el sistema de consulta de agendas. ¿Podrías verificar que el ID de la sala (SAL-201) es correcto? Mientras tanto, puedo ayudarte a buscar otras salas disponibles o intentar la consulta nuevamente con el ID exacto. ¿Cuánta capacidad necesitas para esa reunión?",
+      "herramientas": [
+        "consultar_agenda"
+      ],
+      "bloqueado_entrada": false,
+      "bloqueado_salida": false,
+      "traza": ""
+    },
+    {
+      "id": "r03",
+      "categoria": "acción",
+      "paso": false,
+      "fallas": [
+        "menciona lo esperado: buscó ['RES-6']"
+      ],
+      "respuesta": "Parece que hay un problema en el sistema de reservas. Por favor, intenta de nuevo en unos momentos o contacta al soporte. ¿Necesitas buscar una sala alternativa o intentamos la reserva más tarde?",
+      "herramientas": [
+        "reservar"
+      ],
+      "bloqueado_entrada": false,
+      "bloqueado_salida": false,
+      "traza": ""
+    },
+    {
+      "id": "r04",
+      "categoria": "conflicto",
+      "paso": false,
+      "fallas": [
+        "juez: La rúbrica especifica que el agente debe verificar si el horario está ocupado y ofrecer alternativas (otra hora u otra sala). Sin embargo, el agente reporta un error técnico del sistema en lugar de confirmar el estado del horario o proporcionar opciones alternativas específicas."
+      ],
+      "respuesta": "Lamento el inconveniente; el sistema de reservas está presentando un error técnico en este momento. Intenta nuevamente en unos minutos o contacta al administrador de salas para completar tu reserva de SAL-201 el 2026-11-10 a las 10:00.",
+      "herramientas": [
+        "reservar",
+        "consultar_agenda"
+      ],
+      "bloqueado_entrada": false,
+      "bloqueado_salida": false,
+      "traza": ""
+    },
+    {
+      "id": "r07",
+      "categoria": "subagente",
+      "paso": false,
+      "fallas": [
+        "usa Agent: llamó ['buscar_salas', 'buscar_salas']",
+        "usa consultar_agenda: llamó ['buscar_salas', 'buscar_salas']"
+      ],
+      "respuesta": "Disculpa, el sistema de reservas tiene un problema técnico que me impide acceder a las salas disponibles en este momento. Te recomiendo que contactes al administrador de salas o intentes de nuevo en unos minutos. ¿Hay algo más en lo que pueda ayudarte?",
+      "herramientas": [
+        "buscar_salas",
+        "buscar_salas"
+      ],
+      "bloqueado_entrada": false,
+      "bloqueado_salida": false,
+      "traza": ""
+    }
+  ]
+}

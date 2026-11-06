@@ -33,9 +33,9 @@ JUEZ_SCHEMA = {
     "additionalProperties": False,
 }
 JUEZ_SYSTEM = (
-    "Eres un evaluador estricto de un agente de soporte bancario. Recibes la pregunta del usuario, la respuesta "
-    "del agente y UNA rúbrica. Decide solo si la respuesta cumple la rúbrica; no evalúes estilo ni otras cosas. "
-    "Primero escribe la razón en una o dos frases y después el veredicto."
+    "Eres un evaluador estricto de un agente de reservas de salas de juntas. Recibes la pregunta del usuario, "
+    "la respuesta del agente y UNA rúbrica. Decide solo si la respuesta cumple la rúbrica; no evalúes estilo ni "
+    "otras cosas. Primero escribe la razón en una o dos frases y después el veredicto."
 )
 
 

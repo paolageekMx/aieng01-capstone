@@ -10,7 +10,7 @@ antes de que la herramienta se ejecute, y su decisión no depende de que el mode
 import os
 
 ESCRITURA = {"create_case", "add_note", "escalate_case"}
-PREFIJO = "mcp__casos__"
+PREFIJO = "mcp__salas__"
 
 
 def decidir(herramienta: str, entrada: dict, modo_auditor: bool) -> tuple[bool, str]:

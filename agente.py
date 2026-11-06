@@ -75,11 +75,17 @@ AGENTES = {
 
 def opciones(**extra) -> ClaudeAgentOptions:
     return ClaudeAgentOptions(
+        agents=AGENTES,
         model=MODELO,
         system_prompt=SYSTEM,
         mcp_servers=SERVIDORES,
-        tools=[],
-        allowed_tools=HERRAMIENTAS,
+        tools=["Agent"],
+        allowed_tools=[
+            "mcp__salas__buscar_salas",
+            "mcp__salas__consultar_agenda",
+            "mcp__salas__reservar",
+            "Agent",
+        ],
         hooks={"PreToolUse": [HookMatcher(matcher=None, hooks=[hook_politica])]},
         setting_sources=[],                                     # aislado: no lee ~/.claude ni .claude/ del proyecto
         max_turns=int(os.environ.get("MAX_TURNOS", "10")),      # freno 1: vueltas
@@ -100,7 +106,10 @@ def mostrar(m) -> None:
     elif isinstance(m, UserMessage) and isinstance(m.content, list):
         for b in m.content:
             if isinstance(b, ToolResultBlock):
-                print(f"    → {'error' if b.is_error else 'ok'}", flush=True)
+                if b.is_error:
+                    print(f"    → error: {str(b.content)[:500]}", flush=True)
+                else:
+                    print("    → ok", flush=True)
     elif isinstance(m, ResultMessage):
         costo = f"USD {m.total_cost_usd:.4f}" if m.total_cost_usd is not None else "s/d"
         print(f"\n[resultado] {m.subtype} · turnos={m.num_turns} · costo≈{costo} · {m.duration_ms / 1000:.1f}s", flush=True)
